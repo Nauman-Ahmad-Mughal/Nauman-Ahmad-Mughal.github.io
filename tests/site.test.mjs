@@ -43,6 +43,17 @@ test('the page only references files inside assets/', () => {
   assert.deepEqual(outside, []);
 });
 
+test('link preview tags point at the live site and a real image', () => {
+  const pick = (pattern) => (html.match(pattern) || [])[1];
+  const canonical = pick(/<link rel="canonical" href="([^"]+)"/);
+  const ogUrl = pick(/<meta property="og:url" content="([^"]+)"/);
+  const ogImage = pick(/<meta property="og:image" content="([^"]+)"/);
+  assert.ok(canonical && ogUrl && ogImage, 'canonical, og:url or og:image is missing');
+  assert.equal(ogUrl, canonical);
+  assert.ok(ogImage.startsWith(canonical), 'og:image must be served by the site itself');
+  assert.ok(existsSync(join(root, ogImage.slice(canonical.length))), ogImage + ' is not in the repository');
+});
+
 test('index.html is plain ASCII', () => {
   const offenders = [...html].filter((ch) => ch.charCodeAt(0) > 127);
   assert.deepEqual(offenders, []);

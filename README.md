@@ -7,8 +7,8 @@ Live site: https://nauman-ahmad-mughal.github.io/
 ## What is here
 
 - `index.html` is the whole site: markup, styles and scripts in one file, with no build step.
-- `assets/` holds the CV and the portrait.
-- `tests/site.test.mjs` checks the page: every local file it links to exists, it only links inside `assets/`, the source is plain ASCII, and `.gitignore` still publishes only the site files. GitHub Actions runs it on every pull request.
+- `assets/` holds the CV, the portrait and the link preview image.
+- `tests/site.test.mjs` checks the page: every local file it links to exists, it only links inside `assets/`, the link preview tags point at the live site and a real image, the source is plain ASCII, and `.gitignore` still publishes only the site files. GitHub Actions runs it on every pull request.
 - `.nojekyll` tells GitHub Pages to serve the files exactly as they are.
 
 ## Add project screenshots

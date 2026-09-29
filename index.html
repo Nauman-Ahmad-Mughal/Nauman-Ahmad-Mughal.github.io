@@ -10,18 +10,27 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Nauman Ahmad Mughal, Laravel Web Developer &amp; UI/UX Designer">
 <meta property="og:description" content="Laravel apps, designed and built. I design the screens people use and build the Laravel backend behind them.">
+<meta property="og:url" content="https://nauman-ahmad-mughal.github.io/">
+<meta property="og:site_name" content="Nauman Ahmad Mughal">
+<meta property="og:image" content="https://nauman-ahmad-mughal.github.io/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nauman Ahmad Mughal, Laravel web developer and UI/UX designer">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://nauman-ahmad-mughal.github.io/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23222225'/%3E%3Crect x='1' y='1' width='30' height='30' rx='7' fill='none' stroke='%23D6B783' stroke-width='1.2'/%3E%3Ctext x='16' y='21' font-family='Arial,sans-serif' font-size='12' font-weight='600' fill='%23D6B783' text-anchor='middle'%3ENM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- Structured data. Search engines read this to connect the page to a person.
-     Add "url" once the site has its own domain. -->
+<!-- Structured data. Search engines read this to connect the page to a person. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Nauman Ahmad Mughal",
+  "url": "https://nauman-ahmad-mughal.github.io/",
+  "image": "https://nauman-ahmad-mughal.github.io/assets/img/portrait.png",
   "jobTitle": "Laravel Web Developer & UI/UX Designer",
   "email": "mailto:naumanahmadmughal571@gmail.com",
   "telephone": "+92-319-6807210",
@@ -523,6 +532,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 .portrait.no-img figcaption { display: flex; }
 
 .stat { padding: 20px 24px 22px; }
+.stat .label { margin-bottom: 12px; }
 .stat b {
   display: block;
   color: var(--gold);
@@ -706,8 +716,6 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 .principle h3 { margin-top: 16px; font-size: 1rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
 .principle p { margin-top: 8px; color: var(--ink-2); font-size: .92rem; line-height: 1.55; }
 
-.interests { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; padding-block: 20px; }
-
 /* ---------- 10. Contact and footer ---------- */
 .contact-tile h2 { margin-top: 16px; font-size: clamp(1.9rem, 1rem + 3.4vw, 3.4rem); }
 .contact-tile .lede { margin-top: 18px; }
@@ -790,6 +798,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 
 @media (max-width: 560px) {
   .brand-txt { display: none; }
+  .stat b { font-size: 1.6rem; }
   .id-card { flex-direction: column; align-items: stretch; }
   .id-card .portrait { flex-basis: auto; aspect-ratio: 1 / 1.05; }
   .socials { margin-left: 0; }
@@ -867,7 +876,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 <section class="hero wrap" id="top">
   <div class="bento">
     <div class="tile hero-tile span-8" data-reveal>
-      <p class="avail"><i aria-hidden="true"></i>Available for freelance and remote work</p>
+      <p class="avail"><i aria-hidden="true"></i>Open to full-time roles and freelance work</p>
       <div>
         <h1 class="display lines"><span class="ln"><span>Nauman | Laravel</span></span><span class="ln"><span>Web developer</span></span></h1>
         <p class="label hero-sub">and UI/UX designer &middot; Lahore, Pakistan</p>
@@ -904,10 +913,10 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
       </div>
     </aside>
 
-    <div class="tile stat span-3" data-reveal><b>02</b><span>Laravel products built end to end</span></div>
-    <div class="tile stat span-3" data-reveal><b>2025</b><span>Joined Devnestic Solutions as a Website Developer</span></div>
-    <div class="tile stat span-3" data-reveal><b>10+</b><span>Technologies and tools in my stack</span></div>
-    <div class="tile stat span-3" data-reveal><b>BSIT</b><span>Government University Faisalabad</span></div>
+    <div class="tile stat span-3" data-reveal><p class="label">Main stack</p><b>Laravel</b><span>PHP, MySQL and REST APIs</span></div>
+    <div class="tile stat span-3" data-reveal><p class="label">Design</p><b>UI/UX</b><span>Wireframes, prototypes and design systems</span></div>
+    <div class="tile stat span-3" data-reveal><p class="label">Education</p><b>BSIT</b><span>Government University Faisalabad</span></div>
+    <div class="tile stat span-3" data-reveal><p class="label">Open to</p><b>Full-time</b><span>and freelance work, Lahore or remote</span></div>
   </div>
 </section>
 
@@ -1045,7 +1054,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 
     <div class="tile more span-12" data-reveal>
       <p>Practice builds, front end tasks and experiments live on GitHub.</p>
-      <a class="btn btn-line btn-sm" href="https://github.com/Nauman-Ahmad-Mughal?tab=repositories" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>All repositories</a>
+      <a class="btn btn-line btn-sm" href="https://github.com/Nauman-Ahmad-Mughal" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>GitHub profile</a>
     </div>
   </div>
 </section>
@@ -1193,7 +1202,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
       <p class="big">A detail-oriented web developer who turns ideas and business requirements into clean, functional and visually engaging web solutions, with <em>Laravel at the centre</em> of everything I build.</p>
       <p>Laravel is my main domain. I plan the database before I write a line of code, keep business logic where it belongs, and treat authentication, authorization and validation as part of the feature rather than something bolted on at the end.</p>
       <p>I also design what people see. At Devnestic Solutions I create wireframes, user flows, prototypes and design systems, and I build interfaces in HTML, CSS, JavaScript, Tailwind CSS and Bootstrap, so a project can go from the first sketch to a working application without being handed off.</p>
-      <p>I work independently, ask questions early, and prefer a slow, correct build over a fast one that has to be rewritten.</p>
+      <p>I work independently, ask questions early, and prefer a careful, correct build over a quick one that has to be rewritten.</p>
     </div>
 
     <dl class="tile facts span-5" data-reveal>
@@ -1201,27 +1210,13 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
       <div><dt class="label">Currently</dt><dd>Website Developer, Devnestic Solutions</dd></div>
       <div><dt class="label">Education</dt><dd>BSIT, Government University Faisalabad</dd></div>
       <div><dt class="label">Languages</dt><dd>Urdu, English</dd></div>
-      <div><dt class="label">Availability</dt><dd>Freelance and remote work</dd></div>
+      <div><dt class="label">Availability</dt><dd>Full-time or freelance, Lahore or remote</dd></div>
       <div><dt class="label">Response</dt><dd>Within a day</dd></div>
     </dl>
 
     <div class="tile principle span-4" data-reveal><p class="n">01</p><h3>Schema before syntax</h3><p>The data model decides how far an application can grow. I design it first, on paper, before the first migration.</p></div>
     <div class="tile principle span-4" data-reveal><p class="n">02</p><h3>Logic where it belongs</h3><p>Thin controllers, honest models, validation in form requests. Every piece stays findable six months later.</p></div>
-    <div class="tile principle span-4" data-reveal><p class="n">03</p><h3>Correct beats clever</h3><p>I would rather ship a build that holds under real data than one that demos well and breaks quietly.</p></div>
-
-    <div class="tile interests span-12" data-reveal>
-      <p class="label gold">Beyond the code</p>
-      <ul class="tags">
-        <li>Exploring new technologies</li>
-        <li>Open-source projects</li>
-        <li>Building side projects</li>
-        <li>Creative problem solving</li>
-        <li>Automation and productivity</li>
-        <li>Tech communities</li>
-        <li>Continuous learning</li>
-      </ul>
-    </div>
-  </div>
+    <div class="tile principle span-4" data-reveal><p class="n">03</p><h3>Correct beats clever</h3><p>I would rather ship a build that holds under real data than one that demos well and breaks quietly.</p></div>  </div>
 </section>
 
 <!-- ============ CONTACT ============ -->
@@ -1234,9 +1229,9 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 
   <div class="bento">
     <div class="tile contact-tile span-8" data-reveal>
-      <p class="label gold">Start a project</p>
+      <p class="label gold">Hiring or have a project?</p>
       <h2 class="display lines"><span class="ln"><span>Let's build something</span></span><span class="ln"><span>that holds up.</span></span></h2>
-      <p class="lede">Open to freelance and remote work. Tell me what you are building and I will reply within a day.</p>
+      <p class="lede">Open to full-time roles and freelance work, in Lahore or remote. Send me the role or the project and I will reply within a day.</p>
       <div class="mail-row">
         <a class="mail" href="mailto:naumanahmadmughal571@gmail.com">naumanahmadmughal571@gmail.com</a>
         <button class="copy" id="copyBtn" type="button" data-mail="naumanahmadmughal571@gmail.com">Copy</button>
@@ -1252,7 +1247,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
         <div><dt class="label">Phone</dt><dd><a href="tel:+923196807210">+92 319 6807210</a></dd></div>
         <div><dt class="label">Based in</dt><dd>Lahore, Punjab, Pakistan</dd></div>
         <div><dt class="label">Local time</dt><dd id="clock">--:--</dd></div>
-        <div><dt class="label">Availability</dt><dd>Freelance and remote work</dd></div>
+        <div><dt class="label">Availability</dt><dd>Full-time or freelance, Lahore or remote</dd></div>
       </dl>
       <div class="reach-social">
         <a href="https://github.com/Nauman-Ahmad-Mughal" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
