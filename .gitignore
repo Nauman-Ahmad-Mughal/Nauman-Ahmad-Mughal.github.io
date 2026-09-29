@@ -1,0 +1,14 @@
+# Publish only the site. Everything else in this folder stays on this computer.
+/*
+!/index.html
+!/assets/
+!/tests/
+!/.github/
+!/README.md
+!/.gitignore
+!/.nojekyll
+
+# Operating system files, wherever they appear
+Thumbs.db
+desktop.ini
+.DS_Store

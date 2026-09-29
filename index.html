@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nauman Ahmad Mughal, Laravel Web Developer &amp; UI/UX Designer</title>
+<meta name="description" content="Laravel web developer and UI/UX designer in Lahore, Pakistan. I design responsive interfaces and build the Laravel backend behind them: database design, authentication, REST APIs and business logic.">
+<meta name="author" content="Nauman Ahmad Mughal">
+<meta name="theme-color" content="#18181A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nauman Ahmad Mughal, Laravel Web Developer &amp; UI/UX Designer">
+<meta property="og:description" content="Laravel apps, designed and built. I design the screens people use and build the Laravel backend behind them.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23222225'/%3E%3Crect x='1' y='1' width='30' height='30' rx='7' fill='none' stroke='%23D6B783' stroke-width='1.2'/%3E%3Ctext x='16' y='21' font-family='Arial,sans-serif' font-size='12' font-weight='600' fill='%23D6B783' text-anchor='middle'%3ENM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Structured data. Search engines read this to connect the page to a person.
+     Add "url" once the site has its own domain. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Nauman Ahmad Mughal",
+  "jobTitle": "Laravel Web Developer & UI/UX Designer",
+  "email": "mailto:naumanahmadmughal571@gmail.com",
+  "telephone": "+92-319-6807210",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lahore",
+    "addressRegion": "Punjab",
+    "addressCountry": "PK"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Government University Faisalabad"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Devnestic Solutions"
+  },
+  "knowsLanguage": ["Urdu", "English"],
+  "sameAs": [
+    "https://github.com/Nauman-Ahmad-Mughal",
+    "https://www.linkedin.com/in/nauman-ahmad-191a693b4/"
+  ],
+  "knowsAbout": ["Laravel", "PHP", "MySQL", "Eloquent ORM", "REST APIs", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Bootstrap", "UI/UX design"]
+}
+</script>
+
+<script>
+/* Runs before first paint: adds .js so scroll reveal only hides content when a
+   script is there to show it again. */
+document.documentElement.classList.add('js');
+</script>
+
+<style>
+/* =========================================================
+   Nauman Ahmad Mughal, portfolio
+   1. Tokens
+   2. Base
+   3. Utilities: bento, tiles, labels, buttons, reveal
+   4. Top bar and dock
+   5. Hero
+   6. Selected works
+   7. Expertise
+   8. Experience
+   9. Profile
+   10. Contact and footer
+   11. Responsive
+   12. Motion and print
+   Graphite surfaces with one champagne gold accent. Every colour, size and
+   rhythm value lives in section 1.
+   ========================================================= */
+
+/* ---------- 1. Tokens ---------- */
+:root {
+  color-scheme: dark;
+
+  --bg: #18181A;
+  --tile-0: #1C1C1F;
+  --tile: #222225;
+  --tile-2: #2A2A2E;
+  --tile-3: #313136;
+  --line: rgba(255, 255, 255, .07);
+  --line-2: rgba(255, 255, 255, .13);
+  --ink: #EFEBE4;
+  --ink-2: #B8B2A7;
+  --ink-3: #9A9489;
+
+  --gold: #D6B783;
+  --gold-hi: #E4C897;
+  --gold-soft: rgba(214, 183, 131, .12);
+  --gold-line: rgba(214, 183, 131, .38);
+  --gold-metal: linear-gradient(180deg, #F3E2BF 0%, #D6B783 50%, #A98352 100%);
+  --on-gold: #1B150C;
+  --copper: #E08A4E;
+  --copper-glow: rgba(224, 138, 78, .2);
+
+  --ff-display: "Jost", "Futura", "Century Gothic", system-ui, sans-serif;
+  --ff-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --wrap: 1200px;
+  --pad: clamp(16px, 4vw, 40px);
+  --gap: clamp(12px, 1.4vw, 16px);
+  --r: 16px;
+  --r-sm: 12px;
+  --ease: cubic-bezier(.22, .68, .28, 1);
+  --dock-h: 72px;
+
+  --reveal-y: clamp(18px, 3vw, 30px);
+  --reveal-dur: .9s;
+  --reveal-ease: cubic-bezier(.22, 1, .36, 1);
+  --reveal-stagger: 80ms;
+}
+
+/* ---------- 2. Base ---------- */
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--ff-sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 { margin: 0; font-family: var(--ff-display); font-weight: 400; line-height: 1.1; }
+p { margin: 0; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
+
+::selection { background: var(--gold); color: var(--on-gold); }
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.ic {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.skip {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 200;
+  padding: 10px 16px;
+  border-radius: 100px;
+  background: var(--gold);
+  color: var(--on-gold);
+  font-size: .85rem;
+  font-weight: 600;
+  transform: translateY(-160%);
+  transition: transform .25s var(--ease);
+}
+.skip:focus { transform: none; }
+
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 120;
+  height: 2px;
+  pointer-events: none;
+}
+.progress span { display: block; width: 0; height: 100%; background: var(--gold); }
+
+/* ---------- 3. Utilities: bento, tiles, labels, buttons, reveal ---------- */
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--pad);
+}
+
+.bento { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--gap); }
+.span-3 { grid-column: span 3; }
+.span-4 { grid-column: span 4; }
+.span-5 { grid-column: span 5; }
+.span-6 { grid-column: span 6; }
+.span-7 { grid-column: span 7; }
+.span-8 { grid-column: span 8; }
+.span-12 { grid-column: 1 / -1; }
+
+.tile {
+  position: relative;
+  padding: clamp(22px, 2.6vw, 32px);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--tile);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .035);
+  transition: border-color .35s var(--ease);
+}
+.tile:hover { border-color: var(--gold-line); }
+
+.label {
+  color: var(--ink-3);
+  font-family: var(--ff-display);
+  font-size: .74rem;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.label.gold { color: var(--gold); }
+
+.sec { padding-top: clamp(56px, 7vw, 88px); }
+.shead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 14px; margin-bottom: 20px; }
+.shead .snum { color: var(--gold); font-family: var(--ff-display); font-size: .8rem; letter-spacing: .18em; }
+.shead h2 { font-size: clamp(1.45rem, 1.15rem + 1vw, 1.95rem); letter-spacing: .01em; }
+.shead .snote { margin-left: auto; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 22px;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  font-family: var(--ff-display);
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background .25s var(--ease), border-color .25s var(--ease), color .25s var(--ease);
+}
+.btn-sm { padding: 10px 18px; }
+.btn-gold { background: var(--gold); color: var(--on-gold); }
+.btn-gold:hover { background: var(--gold-hi); }
+.btn-line { border-color: var(--line-2); color: var(--ink); }
+.btn-line:hover { border-color: var(--gold-line); color: var(--gold); }
+
+.icon-link {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line-2);
+  border-radius: 50%;
+  color: var(--ink-2);
+  transition: border-color .25s var(--ease), color .25s var(--ease);
+}
+.icon-link:hover { border-color: var(--gold-line); color: var(--gold); }
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tags li {
+  padding: 5px 12px;
+  border: 1px solid var(--line-2);
+  border-radius: 100px;
+  color: var(--ink-2);
+  font-family: var(--ff-display);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.feats { display: grid; gap: 9px; }
+.feats li { position: relative; padding-left: 20px; color: var(--ink-2); font-size: .94rem; line-height: 1.55; }
+.feats li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: .58em;
+  width: 5px;
+  height: 5px;
+  background: var(--gold);
+  transform: rotate(45deg);
+}
+
+/* Scroll reveal. A tile waits lowered and transparent, then rises into
+   place when it comes into view. The hidden state never sets a visible
+   transform, so hover effects keep working, and the rise transition applies
+   only while rising: .is-done hands the tile back to its own transitions.
+   --i is the tile's place in the stagger, set by the script, and children
+   such as headline lines, the portrait and the skill graph read it too. */
+.js [data-reveal]:not(.is-in) {
+  opacity: 0;
+  transform: translateY(var(--reveal-y));
+}
+.js [data-reveal].is-in:not(.is-done) {
+  transition:
+    opacity var(--reveal-dur) var(--reveal-ease),
+    transform var(--reveal-dur) var(--reveal-ease);
+  transition-delay: calc(var(--i, 0) * var(--reveal-stagger));
+}
+
+/* Headlines that rise line by line from behind a mask, once their tile is in.
+   The padding gives descenders room inside the mask without changing the
+   layout. The gold metal is painted on each line's own text. */
+.lines .ln {
+  display: block;
+  overflow: hidden;
+  padding-bottom: .12em;
+  margin-bottom: -.12em;
+}
+.lines .ln:nth-child(2) { --ln: 1; }
+.lines .ln > span {
+  display: inline-block;
+  background: var(--gold-metal);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: transform var(--reveal-dur) var(--reveal-ease);
+  transition-delay: calc(var(--i, 0) * var(--reveal-stagger) + 120ms + var(--ln, 0) * 120ms);
+}
+.js [data-reveal]:not(.is-in) .lines .ln > span { transform: translateY(110%); }
+
+.display {
+  font-family: var(--ff-display);
+  font-weight: 300;
+  line-height: 1.04;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+
+/* ---------- 4. Top bar and dock ---------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 22px 18px;
+}
+.brand { display: inline-flex; align-items: center; gap: 12px; min-width: 0; }
+.mark {
+  width: 40px;
+  height: 40px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--gold-line);
+  border-radius: 11px;
+  background: var(--tile);
+  color: var(--gold);
+  font-family: var(--ff-display);
+  font-size: .9rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+}
+.brand-txt {
+  font-family: var(--ff-display);
+  font-size: .82rem;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* The dock is the only navigation, on every screen size, like the dock in
+   the reference: icon over label, active section in gold. */
+.dock {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  z-index: 100;
+  display: flex;
+  gap: 2px;
+  padding: 6px;
+  border: 1px solid var(--line-2);
+  border-radius: 18px;
+  background: rgba(28, 28, 31, .9);
+  box-shadow: 0 18px 40px -18px rgba(0, 0, 0, .85);
+  transform: translateX(-50%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.dock a {
+  min-width: 66px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 10px 7px;
+  border-radius: 12px;
+  color: var(--ink-3);
+  font-family: var(--ff-display);
+  font-size: .66rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  transition: color .25s var(--ease), background .25s var(--ease);
+}
+.dock a:hover { color: var(--ink); background: rgba(255, 255, 255, .04); }
+.dock a.is-active { color: var(--gold); background: var(--gold-soft); }
+.dock .ic { width: 20px; height: 20px; }
+
+/* ---------- 5. Hero ---------- */
+.hero-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 36px;
+  min-height: 460px;
+}
+.avail {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  padding: 7px 15px 7px 12px;
+  border: 1px solid var(--line-2);
+  border-radius: 100px;
+  color: var(--ink-2);
+  font-size: .82rem;
+}
+.avail i { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px var(--gold-soft); }
+.hero-tile h1 { font-size: clamp(2rem, .9rem + 4.6vw, 4.3rem); }
+.hero-sub { margin-top: 16px; }
+.lede { max-width: 56ch; margin-top: 20px; color: var(--ink-2); font-size: 1.04rem; line-height: 1.65; }
+.cta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 28px; }
+.socials { display: flex; gap: 8px; margin-left: 4px; }
+
+.id-card { display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 24px; }
+.id-text { padding-inline: 10px; }
+.id-name {
+  font-family: var(--ff-display);
+  font-size: .9rem;
+  font-weight: 500;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.id-tag { margin-top: 8px; color: var(--ink-2); font-size: .94rem; line-height: 1.55; }
+.id-meta { margin-top: 10px; color: var(--ink-3); font-size: .84rem; }
+
+/* The portrait is a cut-out PNG in black and white, like the reference, and
+   turns to colour on hover. The cut-out is not centred inside its own file:
+   its subject sits 63px left of the 941px canvas centre, so --nudge
+   (63 / 941 = 6.7% of the image width) puts the subject on the middle.
+   --zoom and --lift frame head to chest. */
+.portrait {
+  position: relative;
+  flex: 1;
+  min-height: 300px;
+  margin: 0;
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  background:
+    radial-gradient(80% 60% at 50% 18%, rgba(214, 183, 131, .16), transparent 70%),
+    var(--tile-0);
+}
+.portrait::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  height: 26%;
+  background: linear-gradient(180deg, transparent, rgba(28, 28, 31, .92));
+  pointer-events: none;
+}
+.portrait img {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 0;
+  width: auto;
+  height: var(--zoom, 190%);
+  max-width: none;
+  transform: translate(calc(-50% + var(--nudge, 6.7%)), calc(var(--lift, -11%) + var(--drop, 0%)));
+  filter: grayscale(1) contrast(1.06);
+  transition:
+    opacity var(--reveal-dur) var(--reveal-ease),
+    transform calc(var(--reveal-dur) * 1.4) var(--reveal-ease),
+    filter .6s var(--ease);
+  transition-delay:
+    calc(var(--i, 0) * var(--reveal-stagger) + 150ms),
+    calc(var(--i, 0) * var(--reveal-stagger) + 150ms),
+    0s;
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.id-card:hover .portrait img { filter: grayscale(0) contrast(1); }
+/* The photo rises into the frame a beat after its tile, and waits until the
+   file has loaded (.is-loaded), so a slow download fades in rather than
+   popping in. --drop is how far below its resting place it starts. */
+.js [data-reveal]:not(.is-in) .portrait img,
+.js .portrait:not(.is-loaded) img {
+  --drop: 6%;
+  opacity: 0;
+}
+.portrait figcaption {
+  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+  color: var(--ink-3);
+  font-size: .84rem;
+  text-align: center;
+}
+.portrait.no-img figcaption { display: flex; }
+
+.stat { padding: 20px 24px 22px; }
+.stat b {
+  display: block;
+  color: var(--gold);
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 1.4rem + 1.6vw, 2.7rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: .03em;
+}
+.stat span { display: block; margin-top: 10px; color: var(--ink-2); font-size: .88rem; line-height: 1.45; }
+
+/* ---------- 6. Selected works ---------- */
+.work { display: flex; flex-direction: column; padding: 12px; }
+.work-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  background: var(--tile-0);
+  overflow: hidden;
+}
+.work-media img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform .6s var(--ease);
+  -webkit-user-drag: none;
+  user-select: none;
+}
+.work:hover .work-media img { transform: scale(1.03); }
+.work-body { display: flex; flex: 1; flex-direction: column; padding: 22px 14px 12px; }
+.work h3 { margin-top: 10px; font-size: clamp(1.35rem, 1.1rem + .8vw, 1.75rem); letter-spacing: .06em; text-transform: uppercase; }
+.work-body > p { margin-top: 10px; color: var(--ink-2); }
+.work .feats { margin-top: 18px; }
+.work-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 22px;
+}
+.work-foot .role { color: var(--ink-3); font-size: .84rem; }
+.work-foot .role b { color: var(--ink); font-weight: 500; }
+
+.more { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; padding-block: 18px; }
+.more p { color: var(--ink-2); font-size: .94rem; }
+
+/* Shown until a real screenshot is added: a drawn cover of what the project
+   does, taken from its description, so it reads as a deliberate cover rather
+   than a missing image. */
+.shot-empty {
+  display: none;
+  position: absolute;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(80% 70% at 50% 0%, rgba(214, 183, 131, .1), transparent 70%),
+    var(--tile-0);
+}
+.work-media.no-img .shot-empty { display: flex; }
+.shot-empty::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, .09) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+.shot-empty svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform .6s var(--ease);
+}
+.work:hover .shot-empty svg { transform: scale(1.03); }
+.cv-win { fill: var(--tile-2); stroke: var(--line-2); }
+.cv-bar { fill: var(--tile-3); }
+.cv-dot { fill: var(--line-2); }
+.cv-box { fill: var(--tile); stroke: var(--line-2); }
+.cv-hot { fill: var(--gold-soft); stroke: var(--gold); }
+.cv-link { fill: none; stroke: var(--ink-3); stroke-width: 1.2; }
+.cv-dash { fill: none; stroke: var(--line-2); stroke-width: 1.2; stroke-dasharray: 4 4; }
+.cv-arrow { fill: var(--ink-3); }
+.cv-fill { fill: rgba(255, 255, 255, .08); }
+.cv-ink { fill: var(--ink); }
+.cv-accent { fill: var(--gold); }
+.cv-plus { fill: none; stroke: var(--on-gold); stroke-width: 1.6; stroke-linecap: round; }
+.cv-title { fill: var(--ink-3); font: 500 10px var(--ff-display); letter-spacing: .16em; }
+.cv-label { fill: var(--ink); font: 500 13px var(--ff-sans); }
+.cv-note { fill: var(--ink-3); font: 10px var(--ff-sans); letter-spacing: .02em; }
+.cv-note.hot { fill: var(--gold); }
+
+/* ---------- 7. Expertise ---------- */
+.graph-tile { display: flex; align-items: center; padding: 14px; }
+.graph { display: block; width: 100%; height: auto; }
+.graph .edge {
+  fill: none;
+  stroke: var(--gold-line);
+  stroke-width: 1.2;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1.4s var(--reveal-ease);
+  transition-delay: calc(var(--i, 0) * var(--reveal-stagger) + 250ms + var(--d, 0) * 70ms);
+}
+.graph .node {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: opacity .7s var(--reveal-ease), transform .7s var(--reveal-ease);
+  transition-delay: calc(var(--i, 0) * var(--reveal-stagger) + 450ms + var(--d, 0) * 70ms);
+}
+.js [data-reveal]:not(.is-in) .graph .edge { stroke-dashoffset: 1; }
+.js [data-reveal]:not(.is-in) .graph .node { opacity: 0; transform: scale(.5); }
+.graph .glow { fill: var(--copper-glow); }
+.graph .dot { fill: var(--copper); }
+.graph .core-glow { fill: var(--gold-soft); }
+.graph .core-ring { fill: none; stroke: var(--gold-line); stroke-width: 1.2; }
+.graph .core-dot { fill: var(--gold); }
+.graph .core-pill { fill: var(--tile); stroke: var(--gold-line); }
+.graph .lbl { fill: var(--ink-2); font: 400 15px var(--ff-sans); }
+.graph .lbl-core { fill: var(--gold); font: 500 15px var(--ff-display); letter-spacing: .16em; }
+
+.caps { display: flex; flex-direction: column; }
+.cap { padding-block: 16px; border-top: 1px solid var(--line); }
+.cap:first-child { padding-top: 0; border-top: 0; }
+.cap h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.cap .flag {
+  padding: 3px 9px;
+  border-radius: 100px;
+  background: var(--gold);
+  color: var(--on-gold);
+  font-size: .62rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+}
+.cap p { margin-top: 6px; color: var(--ink-2); font-size: .92rem; line-height: 1.55; }
+.tools-line { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); color: var(--ink-3); font-size: .86rem; }
+.tools-line b { color: var(--ink-2); font-weight: 500; }
+
+/* ---------- 8. Experience ---------- */
+.xp { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 16px clamp(20px, 4vw, 48px); }
+.xp h3 { margin-top: 12px; font-size: clamp(1.25rem, 1.05rem + .7vw, 1.6rem); letter-spacing: .05em; text-transform: uppercase; }
+.xp .role { margin-top: 8px; color: var(--ink-2); font-size: .94rem; }
+.xp .place { margin-top: 4px; color: var(--ink-3); font-size: .86rem; }
+.xp .tags { margin-bottom: 14px; }
+.xp .gpa { color: var(--ink-2); font-size: .94rem; }
+.xp .gpa b { color: var(--gold); font-family: var(--ff-display); font-weight: 400; letter-spacing: .06em; }
+
+/* ---------- 9. Profile ---------- */
+.story p { color: var(--ink-2); max-width: 64ch; }
+.story p + p { margin-top: 16px; }
+.story p.big {
+  margin: 14px 0 22px;
+  color: var(--ink);
+  font-family: var(--ff-display);
+  font-size: clamp(1.3rem, 1.1rem + .8vw, 1.7rem);
+  font-weight: 300;
+  line-height: 1.4;
+}
+.story p.big em { color: var(--gold); font-style: normal; }
+
+.facts { display: grid; align-content: start; }
+.facts div { display: grid; gap: 2px; padding-block: 13px; border-top: 1px solid var(--line); }
+.facts div:first-child { padding-top: 0; border-top: 0; }
+.facts dd { color: var(--ink); font-size: .96rem; }
+
+.principle .n { color: var(--gold); font-family: var(--ff-display); font-size: 1.8rem; font-weight: 300; line-height: 1; }
+.principle h3 { margin-top: 16px; font-size: 1rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
+.principle p { margin-top: 8px; color: var(--ink-2); font-size: .92rem; line-height: 1.55; }
+
+.interests { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; padding-block: 20px; }
+
+/* ---------- 10. Contact and footer ---------- */
+.contact-tile h2 { margin-top: 16px; font-size: clamp(1.9rem, 1rem + 3.4vw, 3.4rem); }
+.contact-tile .lede { margin-top: 18px; }
+.mail-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 26px; }
+.mail {
+  color: var(--ink);
+  font-size: clamp(1rem, .9rem + .6vw, 1.25rem);
+  word-break: break-all;
+  border-bottom: 1px solid var(--gold-line);
+  transition: color .25s var(--ease), border-color .25s var(--ease);
+}
+.mail:hover { color: var(--gold); border-color: var(--gold); }
+.copy {
+  padding: 8px 14px;
+  border: 1px solid var(--line-2);
+  border-radius: 100px;
+  background: transparent;
+  color: var(--ink-2);
+  font-family: var(--ff-display);
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color .25s var(--ease), color .25s var(--ease);
+}
+.copy:hover, .copy.is-done { border-color: var(--gold-line); color: var(--gold); }
+.contact-tile .cta { margin-top: 24px; }
+
+.reach { display: flex; flex-direction: column; }
+.reach .facts { flex: 1; }
+.reach .facts a:hover { color: var(--gold); }
+.reach-social { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+.reach-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  color: var(--ink-2);
+  font-family: var(--ff-display);
+  font-size: .76rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  transition: border-color .25s var(--ease), color .25s var(--ease);
+}
+.reach-social a:hover { border-color: var(--gold-line); color: var(--gold); }
+
+.ftr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 20px;
+  margin-top: clamp(40px, 6vw, 64px);
+  padding-top: 22px;
+  padding-bottom: calc(var(--dock-h) + 48px);
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: .84rem;
+}
+
+/* ---------- 11. Responsive ---------- */
+@media (max-width: 1000px) {
+  .span-3 { grid-column: span 6; }
+  .span-4.principle { grid-column: 1 / -1; }
+}
+
+@media (max-width: 900px) {
+  .span-4, .span-5, .span-6, .span-7, .span-8 { grid-column: 1 / -1; }
+  .hero-tile { min-height: 0; }
+  .portrait { min-height: 0; aspect-ratio: 1 / 1; }
+  .id-card { flex-direction: row; align-items: center; padding: 12px; }
+  .id-card .portrait { flex: 0 0 min(40%, 220px); }
+  .xp { grid-template-columns: 1fr; }
+  .shead .snote { margin-left: 0; width: 100%; }
+}
+
+@media (max-width: 560px) {
+  .brand-txt { display: none; }
+  .id-card { flex-direction: column; align-items: stretch; }
+  .id-card .portrait { flex-basis: auto; aspect-ratio: 1 / 1.05; }
+  .socials { margin-left: 0; }
+  /* Buttons stretch to fill their row, so wrapped rows end flush on both sides. */
+  .cta .btn { flex: 1 1 auto; }
+  .reach-social { grid-template-columns: 1fr; }
+  .graph .lbl { font-size: 23px; }
+  .graph .lbl-core { font-size: 19px; }
+  .ftr { flex-direction: column; }
+}
+
+/* On phones the dock spans the screen and its five items share the width
+   equally, so the longest label (Experience) still fits. */
+@media (max-width: 560px) {
+  .dock { left: 10px; right: 10px; transform: none; }
+  .dock a { flex: 1; min-width: 0; padding: 8px 2px 7px; font-size: .6rem; letter-spacing: .04em; }
+}
+
+/* ---------- 12. Motion and print ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+  .js [data-reveal]:not(.is-in) { opacity: 1; transform: none; }
+  .js [data-reveal]:not(.is-in) .lines .ln > span { transform: none; }
+  .js [data-reveal]:not(.is-in) .graph .edge { stroke-dashoffset: 0; }
+  .js [data-reveal]:not(.is-in) .graph .node { opacity: 1; transform: none; }
+  .portrait img, .graph .edge, .graph .node { transition: none; }
+}
+
+@media print {
+  .dock, .progress { display: none !important; }
+  .js [data-reveal]:not(.is-in) { opacity: 1; transform: none; }
+  .js [data-reveal]:not(.is-in) .lines .ln > span { transform: none; }
+  .js [data-reveal]:not(.is-in) .portrait img,
+  .js .portrait:not(.is-loaded) img { --drop: 0%; opacity: 1; }
+  .js [data-reveal]:not(.is-in) .graph .edge { stroke-dashoffset: 0; }
+  .js [data-reveal]:not(.is-in) .graph .node { opacity: 1; transform: none; }
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<!-- Icons, drawn once and reused with <use href="#i-..."> -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7.5 8.5 6 8.5-6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3.5 7.5a2 2 0 0 1 2-2h4l2 2.5h7a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-graph" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.6"/><circle cx="5" cy="6" r="1.8"/><circle cx="19" cy="6" r="1.8"/><circle cx="6" cy="18.5" r="1.8"/><circle cx="18.5" cy="18" r="1.8"/><path d="m6.5 7.2 3.6 3M17.5 7.2l-3.6 3M7.4 17.3l2.9-3.3M16.9 16.8 14 13.9"/></symbol>
+  <symbol id="i-case" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M8.5 7V5.5A1.5 1.5 0 0 1 10 4h4a1.5 1.5 0 0 1 1.5 1.5V7M3 12.5h18"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.8"/><path d="M4.5 20c.8-3.8 3.9-6 7.5-6s6.7 2.2 7.5 6"/></symbol>
+</svg>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar wrap">
+  <a class="brand" href="#top" aria-label="Nauman Ahmad Mughal, back to top">
+    <span class="mark">NM</span>
+    <span class="brand-txt">Nauman Ahmad Mughal</span>
+  </a>
+  <a class="btn btn-line btn-sm" href="#contact">Let's talk</a>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero wrap" id="top">
+  <div class="bento">
+    <div class="tile hero-tile span-8" data-reveal>
+      <p class="avail"><i aria-hidden="true"></i>Available for freelance and remote work</p>
+      <div>
+        <h1 class="display lines"><span class="ln"><span>Nauman | Laravel</span></span><span class="ln"><span>Web developer</span></span></h1>
+        <p class="label hero-sub">and UI/UX designer &middot; Lahore, Pakistan</p>
+        <p class="lede">I design the screens people use, then build the Laravel backend behind them: database design, authentication, REST APIs and the business logic that keeps data correct.</p>
+        <div class="cta">
+          <a class="btn btn-gold" href="#work">See my work <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-line" href="mailto:naumanahmadmughal571@gmail.com"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>Email me</a>
+          <a class="btn btn-line" href="assets/Nauman_Ahmad_Mughal_CV.pdf" download>Download CV <svg class="ic" aria-hidden="true"><use href="#i-down"/></svg></a>
+          <span class="socials">
+            <a class="icon-link" href="https://github.com/Nauman-Ahmad-Mughal" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg></a>
+            <a class="icon-link" href="https://www.linkedin.com/in/nauman-ahmad-191a693b4/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ic" aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <aside class="tile id-card span-4" data-reveal aria-label="About Nauman">
+      <figure class="portrait">
+        <picture>
+          <source srcset="assets/img/portrait.webp" type="image/webp">
+          <img src="assets/img/portrait.png" alt="Nauman Ahmad Mughal" decoding="async" draggable="false"
+               onload="this.closest('.portrait').classList.add('is-loaded');"
+               onerror="this.closest('.portrait').classList.add('no-img'); this.remove();">
+        </picture>
+        <figcaption>
+          <span class="label">assets/img/portrait.webp</span>
+          <span>Drop a photo at this path to fill the frame</span>
+        </figcaption>
+      </figure>
+      <div class="id-text">
+        <p class="id-name">Nauman Ahmad Mughal.</p>
+        <p class="id-tag">Code with purpose. Build with impact.</p>
+        <p class="id-meta">Website Developer at Devnestic Solutions</p>
+      </div>
+    </aside>
+
+    <div class="tile stat span-3" data-reveal><b>02</b><span>Laravel products built end to end</span></div>
+    <div class="tile stat span-3" data-reveal><b>2025</b><span>Joined Devnestic Solutions as a Website Developer</span></div>
+    <div class="tile stat span-3" data-reveal><b>10+</b><span>Technologies and tools in my stack</span></div>
+    <div class="tile stat span-3" data-reveal><b>BSIT</b><span>Government University Faisalabad</span></div>
+  </div>
+</section>
+
+<!-- ============ SELECTED WORKS ============ -->
+<!-- Work comes straight after the hero. A recruiter gives a portfolio about
+     twenty seconds, and the proof has to land inside that window. -->
+<section class="sec wrap" id="work">
+  <div class="shead" data-reveal>
+    <span class="snum">01</span>
+    <h2>Selected works</h2>
+    <span class="label snote">Two Laravel products</span>
+  </div>
+
+  <div class="bento">
+    <!-- To add a project: copy one <article class="tile work"> block and change the
+         text, the image filename and the index number. The drawn cover inside
+         .shot-empty only shows while the screenshot at that filename is missing. -->
+    <article class="tile work span-6" data-reveal>
+      <div class="work-media">
+        <img src="assets/img/excellence-hub.png" alt="Excellence Hub screenshot" loading="lazy" decoding="async" draggable="false" onerror="this.closest('.work-media').classList.add('no-img'); this.remove();">
+        <div class="shot-empty">
+          <svg viewBox="0 0 480 300" aria-hidden="true" focusable="false">
+            <defs>
+              <marker id="eh-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+                <path class="cv-arrow" d="M0 0 8 4 0 8z"/>
+              </marker>
+            </defs>
+            <rect class="cv-win" x="36" y="32" width="408" height="236" rx="12"/>
+            <path class="cv-bar" d="M48 32h384a12 12 0 0 1 12 12v16H36V44a12 12 0 0 1 12-12z"/>
+            <circle class="cv-dot" cx="54" cy="46" r="3.5"/>
+            <circle class="cv-dot" cx="66" cy="46" r="3.5"/>
+            <circle class="cv-dot" cx="78" cy="46" r="3.5"/>
+            <text class="cv-title" x="240" y="50" text-anchor="middle">EXCELLENCE HUB</text>
+            <path class="cv-dash" d="M94 142V206q0 12 12 12h72"/>
+            <path class="cv-dash" d="M386 142V206q0 12-12 12h-72"/>
+            <path class="cv-link" d="M240 152v38"/>
+            <path class="cv-link" d="M136 120h42" marker-end="url(#eh-arrow)"/>
+            <path class="cv-link" d="M296 120h42" marker-end="url(#eh-arrow)"/>
+            <text class="cv-note" x="160" y="110" text-anchor="middle">posts</text>
+            <text class="cv-note" x="320" y="110" text-anchor="middle">request</text>
+            <text class="cv-note" x="250" y="176">managed together</text>
+            <rect class="cv-box" x="52" y="98" width="84" height="44" rx="10"/>
+            <text class="cv-label" x="94" y="125" text-anchor="middle">Buyer</text>
+            <rect class="cv-hot" x="184" y="88" width="112" height="64" rx="10"/>
+            <text class="cv-label" x="240" y="115" text-anchor="middle">Project</text>
+            <text class="cv-note hot" x="240" y="133" text-anchor="middle">requirements</text>
+            <rect class="cv-box" x="344" y="98" width="84" height="44" rx="10"/>
+            <text class="cv-label" x="386" y="125" text-anchor="middle">Company</text>
+            <rect class="cv-box" x="184" y="196" width="112" height="44" rx="10"/>
+            <text class="cv-label" x="240" y="223" text-anchor="middle">Admin</text>
+          </svg>
+        </div>
+      </div>
+      <div class="work-body">
+        <p class="label gold">Project 01 &middot; Freelancing platform</p>
+        <h3>Excellence Hub</h3>
+        <p>A Laravel platform that connects buyers with companies and professional service providers, from the first project request to managing the work together.</p>
+        <ul class="feats">
+          <li>Buyers post projects and define their requirements</li>
+          <li>Project requests go to suitable companies</li>
+          <li>Project management shared by buyers, companies and admins</li>
+          <li>Responsive screens on a structured, database-driven backend</li>
+        </ul>
+        <div class="work-foot">
+          <ul class="tags"><li>Laravel</li><li>MySQL</li><li>Blade</li><li>Auth</li></ul>
+          <p class="role">Role <b>Sole developer</b></p>
+        </div>
+      </div>
+    </article>
+
+    <article class="tile work span-6" data-reveal>
+      <div class="work-media">
+        <img src="assets/img/oneten-exporter.png" alt="One Ten Exporter screenshot" loading="lazy" decoding="async" draggable="false" onerror="this.closest('.work-media').classList.add('no-img'); this.remove();">
+        <div class="shot-empty">
+          <svg viewBox="0 0 480 300" aria-hidden="true" focusable="false">
+            <rect class="cv-win" x="28" y="32" width="356" height="236" rx="12"/>
+            <path class="cv-bar" d="M40 32h332a12 12 0 0 1 12 12v16H28V44a12 12 0 0 1 12-12z"/>
+            <circle class="cv-dot" cx="46" cy="46" r="3.5"/>
+            <circle class="cv-dot" cx="58" cy="46" r="3.5"/>
+            <circle class="cv-dot" cx="70" cy="46" r="3.5"/>
+            <text class="cv-title" x="206" y="50" text-anchor="middle">ONE TEN EXPORTER</text>
+            <rect class="cv-ink" x="46" y="74" width="54" height="10" rx="3"/>
+            <rect class="cv-fill" x="250" y="76" width="24" height="6" rx="3"/>
+            <rect class="cv-fill" x="282" y="76" width="24" height="6" rx="3"/>
+            <rect class="cv-fill" x="314" y="76" width="24" height="6" rx="3"/>
+            <rect class="cv-hot" x="46" y="96" width="52" height="18" rx="9"/>
+            <rect class="cv-box" x="106" y="96" width="52" height="18" rx="9"/>
+            <rect class="cv-box" x="166" y="96" width="52" height="18" rx="9"/>
+            <rect class="cv-box" x="226" y="96" width="52" height="18" rx="9"/>
+            <rect class="cv-box" x="46" y="128" width="94" height="122" rx="8"/>
+            <rect class="cv-bar" x="52" y="134" width="82" height="62" rx="5"/>
+            <rect class="cv-fill" x="54" y="208" width="58" height="6" rx="3"/>
+            <rect class="cv-fill" x="54" y="220" width="40" height="6" rx="3"/>
+            <rect class="cv-accent" x="54" y="234" width="26" height="7" rx="3"/>
+            <rect class="cv-hot" x="148" y="128" width="94" height="122" rx="8"/>
+            <rect class="cv-bar" x="154" y="134" width="82" height="62" rx="5"/>
+            <circle class="cv-accent" cx="224" cy="146" r="8"/>
+            <path class="cv-plus" d="M224 142v8M220 146h8"/>
+            <rect class="cv-fill" x="156" y="208" width="58" height="6" rx="3"/>
+            <rect class="cv-fill" x="156" y="220" width="40" height="6" rx="3"/>
+            <rect class="cv-accent" x="156" y="234" width="26" height="7" rx="3"/>
+            <rect class="cv-box" x="250" y="128" width="94" height="122" rx="8"/>
+            <rect class="cv-bar" x="256" y="134" width="82" height="62" rx="5"/>
+            <rect class="cv-fill" x="258" y="208" width="58" height="6" rx="3"/>
+            <rect class="cv-fill" x="258" y="220" width="40" height="6" rx="3"/>
+            <rect class="cv-accent" x="258" y="234" width="26" height="7" rx="3"/>
+            <rect class="cv-win" x="356" y="86" width="96" height="174" rx="14"/>
+            <rect class="cv-fill" x="390" y="93" width="28" height="5" rx="2.5"/>
+            <rect class="cv-ink" x="366" y="108" width="30" height="6" rx="3"/>
+            <rect class="cv-box" x="366" y="122" width="76" height="72" rx="8"/>
+            <rect class="cv-bar" x="372" y="128" width="64" height="38" rx="5"/>
+            <rect class="cv-fill" x="372" y="172" width="44" height="5" rx="2.5"/>
+            <rect class="cv-accent" x="372" y="182" width="24" height="6" rx="3"/>
+            <rect class="cv-box" x="366" y="202" width="76" height="48" rx="8"/>
+            <rect class="cv-bar" x="372" y="208" width="64" height="30" rx="5"/>
+          </svg>
+        </div>
+      </div>
+      <div class="work-body">
+        <p class="label gold">Project 02 &middot; E-commerce</p>
+        <h3>One Ten Exporter</h3>
+        <p>A responsive Laravel e-commerce website for showcasing and selling products online.</p>
+        <ul class="feats">
+          <li>Dynamic product listings, categories and product detail pages</li>
+          <li>Intuitive navigation for a smooth shopping experience</li>
+          <li>Layouts built for desktop, tablet and mobile</li>
+          <li>Backend for managing website content and product data</li>
+        </ul>
+        <div class="work-foot">
+          <ul class="tags"><li>Laravel</li><li>MySQL</li><li>JavaScript</li><li>E-commerce</li></ul>
+          <p class="role">Role <b>Sole developer</b></p>
+        </div>
+      </div>
+    </article>
+
+    <div class="tile more span-12" data-reveal>
+      <p>Practice builds, front end tasks and experiments live on GitHub.</p>
+      <a class="btn btn-line btn-sm" href="https://github.com/Nauman-Ahmad-Mughal?tab=repositories" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>All repositories</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERTISE ============ -->
+<section class="sec wrap" id="expertise">
+  <div class="shead" data-reveal>
+    <span class="snum">02</span>
+    <h2>Expertise</h2>
+    <span class="label snote">Laravel at the centre</span>
+  </div>
+
+  <div class="bento">
+    <div class="tile graph-tile span-7" data-reveal>
+      <!-- Edges are drawn before nodes so every node sits on top of its lines.
+           --d staggers the draw-in. -->
+      <svg class="graph" viewBox="0 0 600 420" role="img" aria-labelledby="graphTitle">
+        <title id="graphTitle">Laravel at the centre, connected to PHP, MySQL, Eloquent ORM, Auth, REST APIs, Blade and Git and GitHub, with Tailwind CSS, UI/UX design and JavaScript around them</title>
+        <line class="edge" pathLength="1" style="--d:0" x1="300" y1="215" x2="175" y2="120"/>
+        <line class="edge" pathLength="1" style="--d:1" x1="300" y1="215" x2="150" y2="250"/>
+        <line class="edge" pathLength="1" style="--d:2" x1="300" y1="215" x2="185" y2="350"/>
+        <line class="edge" pathLength="1" style="--d:3" x1="300" y1="215" x2="330" y2="365"/>
+        <line class="edge" pathLength="1" style="--d:4" x1="300" y1="215" x2="445" y2="290"/>
+        <line class="edge" pathLength="1" style="--d:5" x1="300" y1="215" x2="420" y2="105"/>
+        <line class="edge" pathLength="1" style="--d:6" x1="300" y1="215" x2="60" y2="190"/>
+        <line class="edge" pathLength="1" style="--d:7" x1="150" y1="250" x2="185" y2="350"/>
+        <line class="edge" pathLength="1" style="--d:8" x1="420" y1="105" x2="525" y2="150"/>
+        <line class="edge" pathLength="1" style="--d:9" x1="525" y1="150" x2="510" y2="55"/>
+        <line class="edge" pathLength="1" style="--d:10" x1="445" y1="290" x2="545" y2="345"/>
+
+        <g class="node" style="--d:1"><circle class="glow" cx="175" cy="120" r="14"/><circle class="dot" cx="175" cy="120" r="5"/><text class="lbl" x="163" y="112" text-anchor="end">PHP</text></g>
+        <g class="node" style="--d:2"><circle class="glow" cx="150" cy="250" r="14"/><circle class="dot" cx="150" cy="250" r="5"/><text class="lbl" x="136" y="256" text-anchor="end">MySQL</text></g>
+        <g class="node" style="--d:3"><circle class="glow" cx="185" cy="350" r="14"/><circle class="dot" cx="185" cy="350" r="5"/><text class="lbl" x="171" y="356" text-anchor="end">Eloquent ORM</text></g>
+        <g class="node" style="--d:4"><circle class="glow" cx="330" cy="365" r="14"/><circle class="dot" cx="330" cy="365" r="5"/><text class="lbl" x="330" y="398" text-anchor="middle">Auth</text></g>
+        <g class="node" style="--d:5"><circle class="glow" cx="445" cy="290" r="14"/><circle class="dot" cx="445" cy="290" r="5"/><text class="lbl" x="457" y="280">REST APIs</text></g>
+        <g class="node" style="--d:6"><circle class="glow" cx="420" cy="105" r="14"/><circle class="dot" cx="420" cy="105" r="5"/><text class="lbl" x="406" y="110" text-anchor="end">Blade</text></g>
+        <g class="node" style="--d:7"><circle class="glow" cx="60" cy="190" r="14"/><circle class="dot" cx="60" cy="190" r="5"/><text class="lbl" x="20" y="166">Git and GitHub</text></g>
+        <g class="node" style="--d:8"><circle class="glow" cx="525" cy="150" r="14"/><circle class="dot" cx="525" cy="150" r="5"/><text class="lbl" x="525" y="180" text-anchor="middle">Tailwind CSS</text></g>
+        <g class="node" style="--d:9"><circle class="glow" cx="510" cy="55" r="14"/><circle class="dot" cx="510" cy="55" r="5"/><text class="lbl" x="496" y="61" text-anchor="end">UI/UX design</text></g>
+        <g class="node" style="--d:10"><circle class="glow" cx="545" cy="345" r="14"/><circle class="dot" cx="545" cy="345" r="5"/><text class="lbl" x="592" y="376" text-anchor="end">JavaScript</text></g>
+
+        <g class="node" style="--d:0">
+          <circle class="core-glow" cx="300" cy="215" r="34"/>
+          <circle class="core-ring" cx="300" cy="215" r="18"/>
+          <circle class="core-dot" cx="300" cy="215" r="8"/>
+          <rect class="core-pill" x="244" y="150" width="112" height="28" rx="14"/>
+          <text class="lbl-core" x="300" y="169.5" text-anchor="middle">LARAVEL</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="tile caps span-5" data-reveal>
+      <div class="cap">
+        <h3>Laravel web applications <span class="flag">Main domain</span></h3>
+        <p>MVC, Eloquent, migrations, middleware, form requests, queues, Blade, CRUD and REST APIs, with authentication and authorization built in from the start.</p>
+      </div>
+      <div class="cap">
+        <h3>UI/UX design</h3>
+        <p>Wireframes, user flows, interactive prototypes and design systems for dashboards, landing pages, SaaS platforms and corporate websites.</p>
+      </div>
+      <div class="cap">
+        <h3>Responsive front ends</h3>
+        <p>HTML5, CSS3 and JavaScript with Tailwind CSS or Bootstrap, tuned for desktop, tablet and mobile.</p>
+      </div>
+      <div class="cap">
+        <h3>APIs and integrations</h3>
+        <p>REST API development, API integration and debugging with Postman.</p>
+      </div>
+      <p class="tools-line"><b>Everyday tools:</b> VS Code, Git and GitHub, Postman, XAMPP, Composer, Laravel Artisan</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="sec wrap" id="experience">
+  <div class="shead" data-reveal>
+    <span class="snum">03</span>
+    <h2>Experience</h2>
+    <span class="label snote">Work and education</span>
+  </div>
+
+  <div class="bento">
+    <article class="tile xp span-12" data-reveal>
+      <div>
+        <p class="label gold">2025 to present</p>
+        <h3>Devnestic Solutions</h3>
+        <p class="role">Website Developer</p>
+      </div>
+      <ul class="feats">
+        <li>Design and build responsive websites and mobile app interfaces, with a strong focus on user experience, usability and modern design standards.</li>
+        <li>Create wireframes, user flows, interactive prototypes and design systems for dashboards, landing pages, SaaS platforms and corporate websites.</li>
+        <li>Work closely with development teams so every design is implemented the way it was intended.</li>
+        <li>Produce branding materials and marketing assets that keep a product's visual identity consistent and engaging.</li>
+      </ul>
+    </article>
+
+    <article class="tile xp span-12" data-reveal>
+      <div>
+        <p class="label gold">Previous role</p>
+        <h3>Sufa International College &amp; University</h3>
+        <p class="role">Management team</p>
+        <p class="place">Sheikhupura, Punjab, Pakistan</p>
+      </div>
+      <ul class="feats">
+        <li>Worked as part of the college's management team.</li>
+      </ul>
+    </article>
+
+    <article class="tile xp span-12" data-reveal>
+      <div>
+        <p class="label gold">Education</p>
+        <h3>Government University Faisalabad</h3>
+        <p class="role">BS Information Technology</p>
+        <p class="place">Faisalabad, Punjab, Pakistan</p>
+      </div>
+      <div>
+        <ul class="tags">
+          <li>Object-oriented programming</li>
+          <li>Database management systems</li>
+          <li>Operating systems</li>
+          <li>Computer networks</li>
+          <li>Software engineering</li>
+          <li>Artificial intelligence</li>
+          <li>Machine learning</li>
+          <li>Web development</li>
+          <li>Discrete mathematics</li>
+        </ul>
+        <p class="gpa">GPA <b>3.00</b></p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ PROFILE ============ -->
+<section class="sec wrap" id="profile">
+  <div class="shead" data-reveal>
+    <span class="snum">04</span>
+    <h2>Profile</h2>
+    <span class="label snote">Code with purpose. Build with impact.</span>
+  </div>
+
+  <div class="bento">
+    <div class="tile story span-7" data-reveal>
+      <p class="label gold">About me</p>
+      <p class="big">A detail-oriented web developer who turns ideas and business requirements into clean, functional and visually engaging web solutions, with <em>Laravel at the centre</em> of everything I build.</p>
+      <p>Laravel is my main domain. I plan the database before I write a line of code, keep business logic where it belongs, and treat authentication, authorization and validation as part of the feature rather than something bolted on at the end.</p>
+      <p>I also design what people see. At Devnestic Solutions I create wireframes, user flows, prototypes and design systems, and I build interfaces in HTML, CSS, JavaScript, Tailwind CSS and Bootstrap, so a project can go from the first sketch to a working application without being handed off.</p>
+      <p>I work independently, ask questions early, and prefer a slow, correct build over a fast one that has to be rewritten.</p>
+    </div>
+
+    <dl class="tile facts span-5" data-reveal>
+      <div><dt class="label">Based in</dt><dd>Lahore, Punjab, Pakistan</dd></div>
+      <div><dt class="label">Currently</dt><dd>Website Developer, Devnestic Solutions</dd></div>
+      <div><dt class="label">Education</dt><dd>BSIT, Government University Faisalabad</dd></div>
+      <div><dt class="label">Languages</dt><dd>Urdu, English</dd></div>
+      <div><dt class="label">Availability</dt><dd>Freelance and remote work</dd></div>
+      <div><dt class="label">Response</dt><dd>Within a day</dd></div>
+    </dl>
+
+    <div class="tile principle span-4" data-reveal><p class="n">01</p><h3>Schema before syntax</h3><p>The data model decides how far an application can grow. I design it first, on paper, before the first migration.</p></div>
+    <div class="tile principle span-4" data-reveal><p class="n">02</p><h3>Logic where it belongs</h3><p>Thin controllers, honest models, validation in form requests. Every piece stays findable six months later.</p></div>
+    <div class="tile principle span-4" data-reveal><p class="n">03</p><h3>Correct beats clever</h3><p>I would rather ship a build that holds under real data than one that demos well and breaks quietly.</p></div>
+
+    <div class="tile interests span-12" data-reveal>
+      <p class="label gold">Beyond the code</p>
+      <ul class="tags">
+        <li>Exploring new technologies</li>
+        <li>Open-source projects</li>
+        <li>Building side projects</li>
+        <li>Creative problem solving</li>
+        <li>Automation and productivity</li>
+        <li>Tech communities</li>
+        <li>Continuous learning</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="sec wrap" id="contact">
+  <div class="shead" data-reveal>
+    <span class="snum">05</span>
+    <h2>Contact</h2>
+    <span class="label snote">Replies within a day</span>
+  </div>
+
+  <div class="bento">
+    <div class="tile contact-tile span-8" data-reveal>
+      <p class="label gold">Start a project</p>
+      <h2 class="display lines"><span class="ln"><span>Let's build something</span></span><span class="ln"><span>that holds up.</span></span></h2>
+      <p class="lede">Open to freelance and remote work. Tell me what you are building and I will reply within a day.</p>
+      <div class="mail-row">
+        <a class="mail" href="mailto:naumanahmadmughal571@gmail.com">naumanahmadmughal571@gmail.com</a>
+        <button class="copy" id="copyBtn" type="button" data-mail="naumanahmadmughal571@gmail.com">Copy</button>
+      </div>
+      <div class="cta">
+        <a class="btn btn-gold" href="mailto:naumanahmadmughal571@gmail.com"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>Email me</a>
+        <a class="btn btn-line" href="assets/Nauman_Ahmad_Mughal_CV.pdf" download>Download CV <svg class="ic" aria-hidden="true"><use href="#i-down"/></svg></a>
+      </div>
+    </div>
+
+    <div class="tile reach span-4" data-reveal>
+      <dl class="facts">
+        <div><dt class="label">Phone</dt><dd><a href="tel:+923196807210">+92 319 6807210</a></dd></div>
+        <div><dt class="label">Based in</dt><dd>Lahore, Punjab, Pakistan</dd></div>
+        <div><dt class="label">Local time</dt><dd id="clock">--:--</dd></div>
+        <div><dt class="label">Availability</dt><dd>Freelance and remote work</dd></div>
+      </dl>
+      <div class="reach-social">
+        <a href="https://github.com/Nauman-Ahmad-Mughal" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+        <a href="https://www.linkedin.com/in/nauman-ahmad-191a693b4/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ftr wrap">
+  <span>&copy; <span id="year">2026</span> Nauman Ahmad Mughal</span>
+  <span>Code with purpose. Build with impact.</span>
+  <span>Hand built. No page builders, no templates.</span>
+</footer>
+
+<!-- ============ DOCK ============ -->
+<nav class="dock" aria-label="Sections">
+  <a href="#work" data-nav><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg><span>Work</span></a>
+  <a href="#expertise" data-nav><svg class="ic" aria-hidden="true"><use href="#i-graph"/></svg><span>Expertise</span></a>
+  <a href="#experience" data-nav><svg class="ic" aria-hidden="true"><use href="#i-case"/></svg><span>Experience</span></a>
+  <a href="#profile" data-nav><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg><span>Profile</span></a>
+  <a href="#contact" data-nav><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><span>Contact</span></a>
+</nav>
+
+<script>
+/* =========================================================
+   1. Scroll progress
+   2. Reveal on scroll
+   3. Dock: active section
+   4. Copy email
+   5. Local clock and year
+   ========================================================= */
+(function () {
+  'use strict';
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $ = function (sel, ctx) { return (ctx || document).querySelector(sel); };
+  var $$ = function (sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); };
+
+  /* ---------- 1. Scroll progress ---------- */
+  var bar = $('#progressBar');
+  var ticking = false;
+
+  function onScroll() {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    var y = window.scrollY || window.pageYOffset;
+    if (bar) bar.style.width = (max > 0 ? Math.min(y / max, 1) * 100 : 0) + '%';
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(onScroll); }
+  }, { passive: true });
+  onScroll();
+
+  /* ---------- 2. Reveal on scroll ---------- */
+  /* REPLAY true: tiles rise again every time they come back into view,
+     scrolling down or up. false: each tile rises once and then stays. */
+  var REPLAY = true;
+  var revealables = $$('[data-reveal]');
+
+  if (reduced || !('IntersectionObserver' in window)) {
+    revealables.forEach(function (el) { el.classList.add('is-in'); });
+  } else {
+    /* Tiles that come into view together rise one after another in
+       reading order: top to bottom, then left to right. */
+    var revealObs = new IntersectionObserver(function (entries) {
+      entries
+        .filter(function (entry) {
+          return entry.isIntersecting && !entry.target.classList.contains('is-in');
+        })
+        .sort(function (a, b) {
+          var ra = a.boundingClientRect;
+          var rb = b.boundingClientRect;
+          return Math.round(ra.top - rb.top) || (ra.left - rb.left);
+        })
+        .forEach(function (entry, n) {
+          entry.target.style.setProperty('--i', Math.min(n, 6));
+          entry.target.classList.add('is-in');
+          if (!REPLAY) revealObs.unobserve(entry.target);
+        });
+    }, { rootMargin: '-6% 0px -6% 0px', threshold: 0.06 });
+    revealables.forEach(function (el) { revealObs.observe(el); });
+
+    /* Reset a tile only once it is well clear of the viewport, further away
+       than it travels, so the reset can never pull it back into view. */
+    if (REPLAY) {
+      var resetObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) entry.target.classList.remove('is-in', 'is-done');
+        });
+      }, { rootMargin: '20% 0px' });
+      revealables.forEach(function (el) { resetObs.observe(el); });
+    }
+
+    /* When the rise finishes, drop the reveal transition so hover effects
+       run at their own speed again. */
+    document.addEventListener('transitionend', function (e) {
+      var el = e.target;
+      if (e.propertyName !== 'opacity' || e.pseudoElement) return;
+      if (el.hasAttribute && el.hasAttribute('data-reveal') && el.classList.contains('is-in')) el.classList.add('is-done');
+    });
+  }
+
+  /* ---------- 3. Dock: active section ---------- */
+  /* Tracks which section sits in a thin band across the middle of the screen.
+     On the hero no dock item is highlighted. */
+  var navLinks = $$('[data-nav]');
+  var navIds = ['work', 'expertise', 'experience', 'profile', 'contact'];
+  if (navLinks.length && 'IntersectionObserver' in window) {
+    var inBand = {};
+    var navObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) { inBand[entry.target.id] = entry.isIntersecting; });
+      var current = navIds.filter(function (id) { return inBand[id]; }).pop();
+      navLinks.forEach(function (link) {
+        var on = !!current && link.getAttribute('href') === '#' + current;
+        link.classList.toggle('is-active', on);
+        if (on) { link.setAttribute('aria-current', 'true'); } else { link.removeAttribute('aria-current'); }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    navIds.forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) navObs.observe(el);
+    });
+  }
+
+  /* ---------- 4. Copy email ---------- */
+  var copyBtn = $('#copyBtn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function () {
+      var mail = copyBtn.getAttribute('data-mail') || '';
+      var done = function () {
+        copyBtn.textContent = 'Copied';
+        copyBtn.classList.add('is-done');
+        setTimeout(function () {
+          copyBtn.textContent = 'Copy';
+          copyBtn.classList.remove('is-done');
+        }, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(mail).then(done).catch(function () {});
+      } else {
+        var tmp = document.createElement('textarea');
+        tmp.value = mail;
+        tmp.setAttribute('readonly', '');
+        tmp.style.position = 'fixed';
+        tmp.style.opacity = '0';
+        document.body.appendChild(tmp);
+        tmp.select();
+        try { document.execCommand('copy'); done(); } catch (e) {}
+        document.body.removeChild(tmp);
+      }
+    });
+  }
+
+  /* ---------- 5. Local clock and year ---------- */
+  var clock = $('#clock');
+  function tick() {
+    if (!clock) return;
+    try {
+      clock.textContent = new Intl.DateTimeFormat('en-GB', {
+        hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Asia/Karachi'
+      }).format(new Date()) + ' PKT';
+    } catch (e) {
+      clock.textContent = 'Pakistan (PKT)';
+    }
+  }
+  tick();
+  setInterval(tick, 30000);
+
+  var yearEl = $('#year');
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+})();
+</script>
+</body>
+</html>
